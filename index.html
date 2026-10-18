@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Cupcake</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Screen 0: Password Screen -->
+  <div id="password-screen" class="screen active">
+    <div class="card login-card">
+      <h2>Enter Password 🔒</h2>
+      <input type="password" id="pass-input" placeholder="Password yahan likhein...">
+      <button class="btn main-btn" onclick="checkPassword()">Enter</button>
+      <p id="pass-error" class="error-msg"></p>
+    </div>
+  </div>
+
+  <!-- Screen 1: Dashboard (Menu) -->
+  <div id="dashboard-screen" class="screen">
+    <h1 class="cursive-title">Page of Apology 🥺</h1>
+    
+    <div class="box-container">
+      <div class="menu-box">
+        <h3>Note of Apology</h3>
+        <button class="action-btn" onclick="openBox(1)">Enter</button>
+      </div>
+
+      <div class="menu-box">
+        <h3>Note of Guilt</h3>
+        <button class="action-btn" onclick="openBox(2)">Enter</button>
+      </div>
+
+      <div class="menu-box">
+        <h3>Read my heart</h3>
+        <button class="action-btn" onclick="openBox(3)">Read</button>
+      </div>
+
+      <div class="menu-box">
+        <h3>I want to Ask Something</h3>
+        <button class="action-btn" onclick="openBox(4)">Answer</button>
+      </div>
+
+      <div class="menu-box">
+        <h3>SECRET</h3>
+        <button class="action-btn" onclick="openBox(5)">Know</button>
+      </div>
+
+      <div class="menu-box">
+        <h3>GAME CENTRE</h3>
+        <button class="action-btn" onclick="openBox(6)">Enter</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screen 2: Box 1 (Note of Apology) -->
+  <div id="box1-screen" class="screen">
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+    <div class="letter-pad">
+      <div class="notebook-holes"><span></span><span></span><span></span><span></span></div>
+      <div class="letter-content">
+        <p>Sorry Cupcake 💓, main tumhe kabhi itna niraash nahin karna chahunga ,na aaj karna chahta tha ,haalat ho kuchh aise ho gaye the ,meri majboori thi reply na Dena ,main khud bhi thoda udaas tha toh ,main sambhal nahin paaya ,but I am really sorry ,mujhe nahin pata tha tumhaari tabiyat kharab hai ,jab pata chala tab sahi se reply Dene ka mauka nahin tha lekin baad mein main turant aaya.</p>
+        <p>I am sorry Cupcake 💓, tumhaare liye main sach mein kabhi laparwah nahin ho sakta ,yeh aaj meri badnaseebi thi ki main tumhe aaram nahin de paaya ,,agar tum isko meri galti maanti ho to please mujhe maaf kar dena ,baaki main ,,sach bataun toh mujhe aaj vastav mein pachhtawa hai ,tumhe yeh baat ab chhoti lag rahi hogi lekin Cupcake 💓, actual mein thodi si to galti thi meri ,</p>
+        <p><b>I am really Sorry Cupcake 🧁, for all this behaviour</b></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screen 3: Box 2 (Note of Guilt) -->
+  <div id="box2-screen" class="screen">
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+    <div class="letter-pad guilt-pad">
+      <div class="letter-content">
+        <p>Mujhe sach mein afsos hai ki aaj main tumhaari madad nahin kar paata tumhaare dard mein ,main sach mein tumhaare iss nature ka karzdar rahunga ki kaise tum mujhe hamesha jhel leti ho aur tab bhi mere paas apnepan ke saath aati ho "mera bachcha" kehte hue ,main aaj ka guilt sach mein nahin bhoolunga ,sach keh raha hun ,tumhaare dil ko thes pahuchne par mujhe bhi ghabrahat hone lagti hai ,please mera yakeen karo Cupcake 💓, main sach mein uss time ro hi raha tha kyunki na maine koi dhang ka kaam kiya tumhe theek karne ko aur na uss time mere paas koi shabd tha tumhe theek karne ko ,main aisi situation mein sab kuchh bhul jaata hun ,ek dam khaali sa feel karta hun ,mujhe apne haath bohot khaali feel hote hain ,but mujhe ek baat ki khushi hai ,ki itne dukh mein bhi ,dil kabhi khaali nahin hota ,usmein hamesha tumhaara chehra rehta hai ,,please aisa mat socha Karo Cupcake 💓 ki mujhe kya hi fark padhega ,main tumse sach mein bohot pyaar karta hun ,tumhaare pyaar ki mujhe kadr hai ,main tumhe kabhi itne dukh nahin dena chahta ,mujhe sach mein afsos hai ki tumhaari mushkil mein tumhaara saath chhodne jaisi harkatein karne lagta hun ,mujhe maaf kar dena ,aaj ke baad aisa ,nahin hoga kabhi,,,</p>
+        <h3 class="promise-tag">PROMISE 🤝</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screen 4: Box 3 (Read my heart) -->
+  <div id="box3-screen" class="screen">
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+    <div class="heart-envelope">
+      <div class="heart-shape">
+        <div class="heart-inner-text">
+          <h2 class="heart-title">Meri Pyaari Little Princess</h2>
+          <p class="underlined-line">Don't worry, I love you ,mera pyaar badhta hi jaa raha hai ,</p>
+          <p class="underlined-line">tumse kal video call par baatein ki to tumhaari cute cute harkatein dekhke sach mein aur gir gaya pyaar mein ,</p>
+          <p class="underlined-line">main kya karun, tumhaari ada se hamesha tumhaare pyaar mein firse gir jaata hun 🤭,</p>
+          <p class="underlined-line">tumhe hug karne par tumhaare dil ki garmahat mujhe ek baar firse ehsaas karati hai ki ham kitne close hain aur abhi aur kitna kuchh baaki hai hamari life mein ,</p>
+          <p class="underlined-line">meri bachchi 💗, please aise mat socha Karo ki mera pyaar kam ho gaya hai,</p>
+          <p class="underlined-line">even tumhaare aur mere gusse mein bhi mujhe chinta hoti hai tumhaari ,sach mein ,</p>
+          <p class="underlined-line">jaise tumne kal mujhe apne pyaar mein giraya tha apni aankhon se ,coaching mein aamne saamne,</p>
+          <p class="underlined-line">vaise hi main Roz tumhare pyaar mein pagal hota rehta hun ,don't worry ,kahin nahin Jaa Raha ,</p>
+          <p class="underlined-line">duniya palat sakti hai lekin mera pyaar sirf tum hi rahogi 💌</p>
+          <p class="heart-sign">- I love you so much meri bachchi 💕</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screen 5: Box 4 (Ask Something) -->
+  <div id="box4-screen" class="screen">
+    <button class="back-btn" onclick="stopAndBack()">⬅ Back</button>
+    <div class="ask-card">
+      <h2 class="ask-question">Kya Tumne Mujhe Maaf Kar Diya? 🥺</h2>
+      
+      <div id="ask-buttons" class="ask-btn-group">
+        <button class="choice-btn yes-btn" onclick="playVideoChoice(1)">HAAN</button>
+        <button class="choice-btn no-btn" onclick="playVideoChoice(2)">NHI</button>
+      </div>
+      <p class="sub-quote">Sach bolna !</p>
+
+      <div id="video-wrapper" class="video-container" style="display: none;">
+        <video id="apology-video" width="100%" controls playsinline>
+          <source id="video-src" src="" type="video/mp4">
+          Aapka browser video tag support nahi karta.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screen 6: Box 5 (SECRET) -->
+  <div id="box5-screen" class="screen">
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+    <h2 class="secret-title">Choose Inmein se kya khana chahogi? 😋</h2>
+    
+    <div class="food-gallery">
+      <div class="food-card">
+        <img src="roll.jpg" alt="Momos/Roll" onerror="this.src='https://placehold.co/300x200/ffebee/d81b60?text=Momos+Roll';">
+        <p class="food-tag red-tag">Tell me Red for momos 🥟</p>
+      </div>
+
+      <div class="food-card">
+        <img src="chowmein.jpg" alt="Chowmein" onerror="this.src='https://placehold.co/300x200/e3f2fd/1e88e5?text=Chowmein';">
+        <p class="food-tag blue-tag">Tell me Blue for chowmein 🍜</p>
+      </div>
+
+      <div class="food-card">
+        <img src="bhel.jpg" alt="Bhel" onerror="this.src='https://placehold.co/300x200/fffde7/fbc02d?text=Bhel';">
+        <p class="food-tag yellow-tag">Tell me Yellow for bhel 🥣</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screen 7: Box 6 (GAME CENTRE) -->
+  <div id="box6-screen" class="screen">
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+    
+    <div id="game-lobby">
+      <h2 class="lobby-title">Tic-Tac-Toe Arcade 🎮</h2>
+      <button class="lobby-btn" onclick="startGameSession()">Play</button>
+      <button class="lobby-btn exit" onclick="goBack()">Exit</button>
+    </div>
+
+    <div id="game-arena" style="display: none;">
+      <h3 id="turn-indicator">YOUR TURN</h3>
+      <div class="tictac-board" id="tictac-grid">
+        <div class="t-cell" onclick="cellTap(0)"></div>
+        <div class="t-cell" onclick="cellTap(1)"></div>
+        <div class="t-cell" onclick="cellTap(2)"></div>
+        <div class="t-cell" onclick="cellTap(3)"></div>
+        <div class="t-cell" onclick="cellTap(4)"></div>
+        <div class="t-cell" onclick="cellTap(5)"></div>
+        <div class="t-cell" onclick="cellTap(6)"></div>
+        <div class="t-cell" onclick="cellTap(7)"></div>
+        <div class="t-cell" onclick="cellTap(8)"></div>
+      </div>
+      <div class="game-footer">
+        <button class="small-btn" onclick="resetBoard()">Play Again</button>
+        <button class="small-btn exit" onclick="closeGameArena()">Exit to Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Falling Animation Container -->
+  <div id="animation-layer"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>

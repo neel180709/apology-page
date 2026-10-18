@@ -1,0 +1,412 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #ffd1dc 0%, #ffe6eb 100%);
+  font-family: 'Nunito', sans-serif;
+  color: #4a4a4a;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animations Layer */
+#animation-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.falling-element {
+  position: absolute;
+  top: -40px;
+  animation: fallDown linear forwards;
+}
+
+@keyframes fallDown {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(105vh) rotate(360deg); opacity: 0; }
+}
+
+/* Screen Management */
+.screen {
+  display: none;
+  padding: 20px;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screen.active {
+  display: flex;
+}
+
+/* Password Box */
+.login-card {
+  margin-top: 25vh;
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.25);
+  text-align: center;
+  width: 90%;
+  max-width: 360px;
+}
+
+.login-card h2 {
+  color: #ff6b81;
+  margin-bottom: 20px;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ffd1dc;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  text-align: center;
+}
+
+input[type="password"]:focus {
+  border-color: #ff6b81;
+}
+
+.main-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background: #ff6b81;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.error-msg {
+  color: #e63946;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Dashboard & Boxes */
+.cursive-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #d81b60;
+  text-align: center;
+  margin: 15px 0 25px;
+}
+
+.box-container {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu-box {
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(255, 182, 193, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-box h3 {
+  font-size: 1.1rem;
+  color: #333333;
+}
+
+.action-btn {
+  background: #ff758f;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.back-btn {
+  align-self: flex-start;
+  background: #ffffff;
+  color: #ff6b81;
+  border: 1px solid #ffccd5;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+/* Box 1 Notebook Pad */
+.letter-pad {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  max-width: 480px;
+  line-height: 1.7;
+  position: relative;
+  font-size: 1.05rem;
+}
+
+.notebook-holes {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.notebook-holes span {
+  width: 12px;
+  height: 12px;
+  background: #ffd1dc;
+  border-radius: 50%;
+  display: block;
+}
+
+.letter-content {
+  margin-left: 20px;
+}
+
+.letter-content p {
+  margin-bottom: 15px;
+}
+
+/* Box 2 Guilt */
+.guilt-pad {
+  border-left: 5px solid #a2d2ff;
+}
+
+.promise-tag {
+  color: #ff477e;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* Box 3 Heart Shape Layout */
+.heart-envelope {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.heart-shape {
+  background: #ffffff;
+  border: 3px solid #ff758f;
+  border-radius: 28px;
+  padding: 24px 18px;
+  max-width: 460px;
+  box-shadow: 0 10px 30px rgba(255, 117, 143, 0.2);
+}
+
+.heart-title {
+  text-align: center;
+  color: #ff477e;
+  margin-bottom: 15px;
+}
+
+.underlined-line {
+  border-bottom: 1px dashed #ffb3c1;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.heart-sign {
+  text-align: right;
+  font-weight: bold;
+  color: #d81b60;
+  margin-top: 15px;
+}
+
+/* Box 4 Ask Something */
+.ask-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.ask-question {
+  color: #d81b60;
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+}
+
+.ask-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.choice-btn {
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.yes-btn { background-color: #2ec4b6; }
+.no-btn { background-color: #e71d36; }
+.sub-quote { color: #888; font-style: italic; margin-bottom: 15px; }
+
+.video-container {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Box 5 Food Secret */
+.secret-title {
+  color: #d81b60;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+
+.food-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.food-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.food-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.food-tag {
+  padding: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.red-tag { background: #ffe3e3; color: #c92a2a; }
+.blue-tag { background: #e7f5ff; color: #1971c2; }
+.yellow-tag { background: #fff9db; color: #f08c00; }
+
+/* Box 6 Game Centre */
+.lobby-title {
+  color: #d81b60;
+  margin-bottom: 30px;
+}
+
+#game-lobby {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15vh;
+  align-items: center;
+}
+
+.lobby-btn {
+  width: 200px;
+  padding: 14px;
+  background: #ff6b81;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lobby-btn.exit {
+  background: #ced4da;
+  color: #495057;
+}
+
+#turn-indicator {
+  font-size: 1.4rem;
+  color: #d81b60;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.tictac-board {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  grid-template-rows: repeat(3, 90px);
+  gap: 10px;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.2);
+  margin-bottom: 20px;
+}
+
+.t-cell {
+  background: #fff0f3;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #ff477e;
+  cursor: pointer;
+}
+
+.game-footer {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.small-btn {
+  padding: 10px 18px;
+  background: #ff6b81;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.small-btn.exit {
+  background: #adb5bd;
+}
